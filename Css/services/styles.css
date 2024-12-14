@@ -1,10 +1,7 @@
-@import url('navbar.css');
-@import url('portafolio.css');
-@import url('presentation.css');
-@import url('social.css');
-@import url('about.css');
-@import url('services.css');
-@import url('footer.css');
+@import url('/Css/services/sitios-web.css');
+@import url('/Css/navbar.css');
+@import url(/Css/footer.css);
+
 
 
 * {

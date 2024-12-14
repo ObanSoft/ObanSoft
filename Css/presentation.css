@@ -1,0 +1,188 @@
+#presentation {
+    background: linear-gradient(to right, #2980b9, #8e44ad);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    position: relative;
+    min-height: 100vh;
+    min-height: 400px;
+    overflow: hidden;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.presentation-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.presentation-content img {
+    width: 400px;
+    height: auto;
+    box-shadow: 10px 10px 5px 5px rgba(1, 0, 1, 0.6);
+    border-radius: 300px;
+    margin-right: 20px;
+    transform: translateY(-20px);
+    animation: slideUp 2s ease-in-out forwards, rotateLogo 15s linear infinite;
+}
+
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.text-content h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: fadeInText 2s 0.5s forwards;
+    color: white;
+}
+
+.text-content p {
+    font-size: 35px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+    animation: fadeIntext 2s 1s forwards;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.cta-button {
+    padding: 15px 25px;
+    background: linear-gradient(to right, #7a1d96, #256fb4);
+    color: white;
+    border-radius: 10px;
+    font-size: 26px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    display: inline-block;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInText 2s 1.5s forwards;
+    align-self: center;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #7d3c98, #1f618d);
+    transform: scale(1.1);
+}
+
+section {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    margin: 20px 0;
+}
+
+section > .container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateLogo{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #presentation {
+        padding: 80px 15px; 
+    }
+
+    .presentation-content {
+        flex-direction: column;
+        gap: 30px; 
+    }
+
+    .presentation-content img {
+        width: 300px; 
+        margin-right: 0; 
+    }
+
+    .text-content h1 {
+        font-size: 45px; 
+    }
+
+    .text-content p {
+        font-size: 25px; 
+        padding: 15px;
+    }
+
+    .cta-button {
+        font-size: 22px; 
+        padding: 12px 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    #presentation {
+        padding: 60px 10px; 
+    }
+
+    .presentation-content {
+        gap: 20px; 
+    }
+
+    .presentation-content img {
+        width: 250px; 
+    }
+
+    .text-content h1 {
+        font-size: 35px; 
+    }
+
+    .text-content p {
+        font-size: 20px; 
+        padding: 12px; 
+    }
+
+    .cta-button {
+        font-size: 20px; 
+        padding: 10px 18px; 
+    }
+}

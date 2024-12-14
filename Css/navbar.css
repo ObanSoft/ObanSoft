@@ -1,0 +1,100 @@
+#navbar {
+    background: linear-gradient(to right, #65addd, #bb80f1);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+.logo-obansoft a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 22px;
+    padding: 4px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #333;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #navbar nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none; 
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links.active {
+        display: flex; 
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    .hamburger {
+        display: block;  
+        cursor: pointer;
+        font-size: 28px;
+        color: white;
+        background: none;
+        border: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-obansoft a {
+        font-size: 20px;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger {
+        display: none; 
+    }
+}
