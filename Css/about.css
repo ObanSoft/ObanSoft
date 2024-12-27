@@ -1,0 +1,80 @@
+#about, #history, #values {
+    display: flex;
+    align-items: center; 
+    flex-direction: column; 
+    padding: 50px 20px;
+    margin: 20px;
+    background-color: transparent;;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#about img, #history img, #values img {
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    margin-bottom: 20px; 
+}
+
+#about:hover, #history:hover, #values:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#about h2, #history h2, #values h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center; 
+    color: aliceblue;
+}
+
+#about p, #history p, #values p, #values ul {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: aliceblue;
+    text-align: center; 
+}
+
+#values ul {
+    list-style: none;
+    padding: 0;
+}
+
+#values li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #about, #history, #values {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about img, #history img, #values img {
+        margin: 0 0 20px 0;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    #about h2, #history h2, #values h2 {
+        font-size: 28px;
+    }
+
+    #about p, #history p, #values p, #values ul {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about h2, #history h2, #values h2 {
+        font-size: 24px;
+    }
+
+    #about p, #history p, #values p, #values ul {
+        font-size: 14px;
+    }
+}

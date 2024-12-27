@@ -1,0 +1,206 @@
+        @import url('/Css/navbar.css'); 
+        @import url('/Css/footer.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to right, #2980b9, #8e44ad);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            padding: 60px 20px; 
+            margin: 10px 0; 
+            flex-grow: 1; 
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background: linear-gradient(to right, #2980b9, #8e44ad);
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: 20px 15px;
+            }
+        }
+
+        #stacks h1 {
+            font-size: 34px; 
+            margin-bottom: 10px; 
+            line-height: 1.5;
+            text-align: center;
+            animation: fadeIntext 2s 1s forwards;
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px; 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #stacks p {
+            font-size: 1.1rem; 
+            line-height: 1.6;
+            color: black;
+            text-align: center;
+            margin: 15px auto; 
+            max-width: 900px;
+            padding: 15px;
+            background-color: transparent;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #stacks p:hover {
+            transform: translateY(-4px); 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+            background-color: rgba(20, 0, 20, 0.1); 
+            color: black; 
+            border-left: 15px solid #4b0658; 
+            transition: all 0.3s ease; 
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+
+        .card {
+            background: #ffffff; 
+            color: #333333;
+            border-radius: 10px;
+            padding: 25px; 
+            width: 30%;
+            max-width: 400px;
+            box-shadow: 
+                6px 6px 12px rgba(0, 0, 0, 0.5), 
+                -6px -6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-sizing: border-box;
+            min-height: 300px; 
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 
+                8px 8px 18px rgba(0, 0, 0, 0.6), 
+                -8px -8px 18px rgba(0, 0, 0, 0.3); 
+        }
+
+        .card .card-icon {
+            font-size: 2.8rem; 
+            color: #4b0658;
+            margin-bottom: 15px; 
+            align-self: flex-start;
+        }
+
+        .card h3 {
+            font-size: 1.6rem; 
+            margin-bottom: 10px; 
+            color: #2980b9;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .use-cases {
+            background-color: white;
+            margin-top: 20px; 
+            background: rgba(0, 0, 0, 0.3); 
+            color: white;
+            padding: 15px; 
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .use-cases h2 {
+            font-size: 1.8rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px; 
+            font-family: 'Arial', sans-serif;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 10px; 
+            border-radius: 8px;
+        }
+
+        .use-cases ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .use-cases ul li {
+            font-size: 1rem; 
+            line-height: 1.6; 
+            margin-bottom: 10px; 
+            padding: 8px; 
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .use-cases ul li strong {
+            color: #15011b;
+        }
+
+        .use-cases:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: column;
+                gap: 10px; 
+            }
+
+            .card {
+                width: 100%;
+                height: auto;
+                min-height: 250px; 
+            }
+
+            .card h3 {
+                font-size: 1.4rem;
+            }
+
+            .card p {
+                font-size: 0.9rem;
+            }
+
+            .use-cases {
+                padding: 10px; 
+            }
+
+            .use-cases h2 {
+                font-size: 1.4rem;
+            }
+
+            .use-cases ul li {
+                font-size: 0.9rem;
+            }
+        }
