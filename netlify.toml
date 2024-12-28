@@ -1,25 +1,26 @@
 [build]
-  publish = "docs"  # directorio público de Netlify
+  # Directorio donde Netlify buscará los archivos a publicar
+  publish = "docs"  # Los archivos HTML están en "docs"
 
-# Redirección para los recursos en la carpeta Css
+# Redirección para los recursos CSS
 [[redirects]]
   from = "/Css/*"
   to = "/Css/:splat"
   status = 200
 
-# Redirección para los recursos en la carpeta Js
+# Redirección para los recursos JavaScript
 [[redirects]]
   from = "/Js/*"
   to = "/Js/:splat"
   status = 200
 
-# Redirección para los recursos en la carpeta Assets
+# Redirección para los recursos en la carpeta de imágenes y otros archivos estáticos (Assets)
 [[redirects]]
   from = "/Assets/*"
   to = "/Assets/:splat"
   status = 200
 
-# Redirección para los recursos en la carpeta Otros
+# Redirección para los recursos en la carpeta Otros (Términos y condiciones, Política de privacidad, etc.)
 [[redirects]]
   from = "/Otros/*"
   to = "/Otros/:splat"
