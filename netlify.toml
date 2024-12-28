@@ -1,3 +1,26 @@
 [build]
-  publish = "docs"
-  command = "echo 'No build command'"
+  publish = "docs"  # directorio público de Netlify
+
+# Redirección para los recursos en la carpeta Css
+[[redirects]]
+  from = "/Css/*"
+  to = "/Css/:splat"
+  status = 200
+
+# Redirección para los recursos en la carpeta Js
+[[redirects]]
+  from = "/Js/*"
+  to = "/Js/:splat"
+  status = 200
+
+# Redirección para los recursos en la carpeta Assets
+[[redirects]]
+  from = "/Assets/*"
+  to = "/Assets/:splat"
+  status = 200
+
+# Redirección para los recursos en la carpeta Otros
+[[redirects]]
+  from = "/Otros/*"
+  to = "/Otros/:splat"
+  status = 200
